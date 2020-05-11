@@ -6,8 +6,8 @@
   "author": "梁玉珂 <liangyk@autoai.com>",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "vuepress dev code",
+    "docs:build": "vuepress build code"
   },
   "devDependencies": {
     "vuepress": "^1.4.1"

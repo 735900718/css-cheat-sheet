@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{270:function(o,n,c){o.exports={accentColor:"#3eaf7c"}}}]);

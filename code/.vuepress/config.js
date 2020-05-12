@@ -13,7 +13,7 @@ module.exports = {
           title: '动画',
           collapsable: false,
           children: [
-            ['/Loading/', 'loading']
+            ['Loading', '加载']
           ]
         },
         {

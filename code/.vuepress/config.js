@@ -1,7 +1,7 @@
 module.exports = {
   title: 'CSS 样式小抄',
   description: '一些CSS样式积累备用',
-  dest: './docs',
+  dest: './dist',
   themeConfig: {
     nav: [
       { text: 'github', link: 'https://github.com/735900718/css-cheat-sheet' },

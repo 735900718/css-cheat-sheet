@@ -1,8 +1,7 @@
 module.exports = {
   title: 'CSS 样式小抄',
   description: '一些CSS样式积累备用',
-  dest: './docs',
-  base: '/css-cheat-sheet',
+  base: '/css-cheat-sheet/',
   themeConfig: {
     nav: [
       { text: 'github', link: 'https://github.com/735900718/css-cheat-sheet' },
@@ -10,10 +9,18 @@ module.exports = {
     sidebar: {
       '/': [
         {
+          title: '样式',
+          collapsable: false,
+          children: [
+            ['Timeline', '时间线'],
+            ['CreateTriangle', '三角形']
+          ]
+        },
+        {
           title: '动画',
           collapsable: false,
           children: [
-            ['Loading', '加载']
+            ['Loading', '加载'],
           ]
         },
         {

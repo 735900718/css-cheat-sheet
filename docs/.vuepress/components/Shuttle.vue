@@ -52,12 +52,10 @@
       <pre class="language-javascript"><code ref="js-code-container"></code></pre>
     </div> -->
 
-    <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="html,result" data-user="735900718" data-slug-hash="yLYjWZj" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="效果-穿梭机">
-      <span>See the Pen <a href="https://codepen.io/735900718/pen/yLYjWZj">
-      效果-穿梭机</a> by 梁玉珂 (<a href="https://codepen.io/735900718">@735900718</a>)
-      on <a href="https://codepen.io">CodePen</a>.</span>
-    </p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <iframe height="600" style="width: 100%;" scrolling="no" title="效果-穿梭机" src="https://codepen.io/735900718/embed/yLYjWZj?height=500&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+      See the Pen <a href='https://codepen.io/735900718/pen/yLYjWZj'>效果-穿梭机</a> by 梁玉珂
+      (<a href='https://codepen.io/735900718'>@735900718</a>) on <a href='https://codepen.io'>CodePen</a>.
+    </iframe>
   </div>
 </template>
 

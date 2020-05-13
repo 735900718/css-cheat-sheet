@@ -1,6 +1,5 @@
 <template>
   <div>
-    选择颜色
     <loading1 />
     <loading2 />
     <loading3 />

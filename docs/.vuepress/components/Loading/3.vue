@@ -27,7 +27,7 @@
       transform: translate(40px, 0);
     }
   }
-  .load-pacman {
+  .load-container__pacman {
     position: absolute;
     top: 0; bottom: 0;
     right: 0;
@@ -36,21 +36,21 @@
     height: 50px;
     border-radius: 50%;
   }
-  .load-pacman:before,
-  .load-pacman:after {
+  .load-container__pacman:before,
+  .load-container__pacman:after {
     content: '';
     position: absolute;
     width: 50px;
     height: 25px;
     background: #fed71a;
   }
-  .load-pacman:before {
+  .load-container__pacman:before {
     animation: load-pacman-up 1s infinite;
     transform-origin: center 100%;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
   }
-  .load-pacman:after {
+  .load-container__pacman:after {
     bottom: 0;
     transform-origin: center 0;
     animation: load-pacman-down 1s infinite;
@@ -78,7 +78,7 @@
       <div class="load-container__circle"></div>
       <div class="load-container__circle"></div>
       <div class="load-container__circle"></div>
-      <div class="load-pacman"></div>
+      <div class="load-container__pacman"></div>
     </div>
     
     <div class="language-html extra-class">
@@ -102,7 +102,7 @@ export default {
   <div class="load-container__circle"></div>
   <div class="load-container__circle"></div>
   <div class="load-container__circle"></div>
-  <div class="load-pacman"></div>
+  <div class="load-container__pacman"></div>
 </div>`;
       let htmlCode = Prism.highlight(codeStr, Prism.languages.html);
       this.$refs["html-code-container"].innerHTML = htmlCode; 
@@ -136,7 +136,7 @@ export default {
     transform: translate(40px, 0);
   }
 }
-.load-pacman {
+.load-container__pacman {
   position: absolute;
   top: 0; bottom: 0;
   right: 0;
@@ -145,21 +145,21 @@ export default {
   height: 50px;
   border-radius: 50%;
 }
-.load-pacman:before,
-.load-pacman:after {
+.load-container__pacman:before,
+.load-container__pacman:after {
   content: '';
   position: absolute;
   width: 50px;
   height: 25px;
   background: #fed71a;
 }
-.load-pacman:before {
+.load-container__pacman:before {
   animation: load-pacman-up 1s infinite;
   transform-origin: center 100%;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
-.load-pacman:after {
+.load-container__pacman:after {
   bottom: 0;
   transform-origin: center 0;
   animation: load-pacman-down 1s infinite;

@@ -3,6 +3,14 @@
   display: flex;
 }
 
+h3 {
+  margin: 20px 0;
+}
+
+.triangle-container__ctrl {
+  min-width: 40%;
+}
+
 .triangle-container__direction {
   margin: 20px 50px;
   position: relative;
@@ -90,6 +98,9 @@
   position: absolute;
   left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   transition: all 0.2s;
 }
 </style>
@@ -217,6 +228,8 @@
         <div class="triangle-container__triangle" :style="triangleStyle"></div>
       </div>
     </div>
+
+    <h2>CSS</h2>
     <div class="language-css extra-class">
       <pre class="language-css"><code ref="css-code-container"></code></pre>
     </div>
@@ -284,8 +297,8 @@ export default {
             width3 = this.height;
             break;
           case "right":
-            width1 = this.top;
-            width3 = this.bottom;
+            width1 = this.height / 2;
+            width3 = this.height / 2;
             width4 = this.width;
             break;
           case "bottom-right":
@@ -294,17 +307,17 @@ export default {
             break;
           case "bottom":
             width1 = this.height;
-            width2 = this.right;
-            width4 = this.left;
+            width2 = this.width / 2;
+            width4 = this.width / 2;
             break;
           case "bottom-left":
             width1 = this.height;
             width4 = this.width;
             break;
           case "left":
-            width1 = this.top;
+            width1 = this.height / 2;
             width2 = this.width;
-            width3 = this.bottom;
+            width3 = this.height / 2;
             break;
           case "top-left":
             width1 = this.height;
@@ -386,9 +399,9 @@ export default {
       let cssCode = `.triangle {
   width: 0;
   height: 0;
-  borderStyle: solid;
-  borderWidth: ${width1}px ${width2}px ${width3}px ${width4}px;
-  borderColor: ${borderColor}
+  border-style: solid;
+  border-width: ${width1}px ${width2}px ${width3}px ${width4}px;
+  border-color: ${borderColor};
 }`;
       this.$nextTick(() => {
         this.handleCssCode(cssCode);
@@ -425,7 +438,7 @@ export default {
       ) {
         this.height = this.width;
         if (this.type == 1) {
-          this.type = 2
+          this.type = 2;
         }
       }
     },

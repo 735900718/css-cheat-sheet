@@ -4,23 +4,35 @@ module.exports = {
   base: '/css-cheat-sheet/',
   themeConfig: {
     nav: [
-      { text: 'github', link: 'https://github.com/735900718/css-cheat-sheet' },
+      { text: 'vue小抄', link: 'http://735900718.github.io/vue-cheat-sheet'},
+      { text: 'github', link: 'https://github.com/735900718/css-cheat-sheet' }
     ],
     sidebar: {
       '/': [
+        {
+          title: '工具',
+          collapsable: false,
+          children: [
+            ['CreatePolygon', '正多边形生成器'],
+            ['CreateTriangle', '三角形生成器']
+          ]
+        },
         {
           title: '样式',
           collapsable: false,
           children: [
             ['Timeline', '时间线'],
-            ['CreateTriangle', '三角形']
+            ['Directory', '目录'],
+            ['Header', 'header'],
+            ['Dialog', '对话框'],
+            ['Button', '按钮']
           ]
         },
         {
           title: '动画',
           collapsable: false,
           children: [
-            ['Loading', '加载'],
+            ['Loading', '加载']
           ]
         },
         {

@@ -2,6 +2,11 @@ module.exports = {
   title: 'CSS 样式小抄',
   description: '一些CSS样式积累备用',
   base: '/css-cheat-sheet/',
+  plugins: [
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
+    }]
+  ],
   themeConfig: {
     nav: [
       { text: 'vue小抄', link: 'http://735900718.github.io/vue-cheat-sheet'},

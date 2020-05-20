@@ -46,7 +46,14 @@ module.exports = {
           children: [
             ['Shuttle', '穿梭机']
           ]
-        }
+        },
+        {
+          title: '其他工具',
+          collapsable: false,
+          children: [
+            ['KeyCode', '按键码']
+          ]
+        },
       ]
     }
   }

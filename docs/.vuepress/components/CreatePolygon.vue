@@ -25,6 +25,7 @@ input {
 }
 
 .polygon-container__polygon {
+  clip-path: polygon(0% 0%, 0% 100%, 50% 50%);
   transition: all 0.2s;
 }
 </style>
@@ -85,16 +86,19 @@ export default {
   width: ${this.size}px;
   height: ${this.size}px;
   background: ${style.accentColor};
-  clipPath: ${polygon};
+  clip-path: ${`polygon(\n${polygon.join(",\n")}\n  )`};
 }`;
       this.$nextTick(() => {
         this.handleCssCode(codeStr);
       });
+      let _polygon = polygon.concat(
+        new Array(this.max - this.sides).fill(polygon[polygon.length - 1])
+      );
       return {
         width: this.size + "px",
         height: this.size + "px",
         background: style.accentColor,
-        clipPath: polygon
+        clipPath: `polygon(\n${_polygon.join(",\n")}\n  )`
       };
     }
   },
@@ -110,7 +114,7 @@ export default {
         let y = 50 * Math.sin(theta) + 50 + "%";
         points.push("    " + x + " " + y);
       }
-      return `polygon(\n${points.join(",\n")}\n  )`;
+      return points;
     },
     handleCssCode(codeStr) {
       let cssCode = Prism.highlight(codeStr, Prism.languages.css);
@@ -118,4 +122,4 @@ export default {
     }
   }
 };
-</script>size
+</script>

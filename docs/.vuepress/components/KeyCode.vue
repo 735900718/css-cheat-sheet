@@ -43,6 +43,12 @@
     line-height: 1.5em;
   }
 }
+
+.help-text {
+  color: #666;
+  font-size: 13px;
+  line-height: 3em;
+}
 </style>
 
 <template>
@@ -53,6 +59,7 @@
         <p>{{keyCode}}</p>
       </div>
     </div>
+    <div class="help-text">请按键查看code码</div>
   </div>
 </template>
 
@@ -68,16 +75,18 @@ export default {
   methods: {
     handleKeyDown(e) {
       e.preventDefault();
-      console.log(e);
       this.keyDown = true;
       this.key = e.key.replace(" ", "Space");
       this.keyCode = e.keyCode;
     },
     handleKeyUp(e) {
+      e.preventDefault();
       this.keyDown = false;
+      this.key = e.key.replace(" ", "Space");
+      this.keyCode = e.keyCode;
     }
   },
-  created() {
+  mounted() {
     document.addEventListener("keydown", this.handleKeyDown);
     document.addEventListener("keyup", this.handleKeyUp);
   },

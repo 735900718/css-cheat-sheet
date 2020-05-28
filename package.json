@@ -6,14 +6,16 @@
   "author": "梁玉珂 <liangyk@autoai.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs",
+    "dev": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs",
     "deploy": "sh deploy.sh"
   },
   "devDependencies": {
+    "element-ui": "^2.13.2",
     "vuepress": "^1.4.1"
   },
   "dependencies": {
+    "core-js": "^3.6.5",
     "normalize.css": "^8.0.1",
     "prismjs": "^1.20.0"
   }

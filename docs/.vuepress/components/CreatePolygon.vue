@@ -35,23 +35,15 @@ input {
     <div class="polygon-container">
       <div class="polygon-container__ctrl">
         <h2>控制</h2>
-        <label>
-          <input
-            type="number"
-            v-model="sides"
-            :min="min"
-            :max="max"
-            :style="{
-            borderColor: sides < min || sides > max ? 'red' : ''
-          }"
-          />
-          <span>条边</span>
-        </label>
-        <br />
-        <label>
-          <span>大小：</span>
-          <input type="number" v-model="size" /> px
-        </label>
+        <br>
+        <el-form>
+          <el-form-item label="边数">
+            <el-input-number v-model="sides" :min="min" :max="max"></el-input-number>
+          </el-form-item>
+          <el-form-item label="大小">
+            <el-input-number v-model="size"></el-input-number> px
+          </el-form-item>
+        </el-form>
       </div>
       <div class="polygon-container__view center">
         <div style="border: 1px solid rgba(0, 0, 0, .2); border-radius: 50%;">

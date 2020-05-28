@@ -15,7 +15,7 @@
     "vuepress": "^1.4.1"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
+    "core-js": "^2.6.11",
     "normalize.css": "^8.0.1",
     "prismjs": "^1.20.0"
   }

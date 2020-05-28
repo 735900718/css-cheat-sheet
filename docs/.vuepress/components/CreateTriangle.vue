@@ -159,69 +159,57 @@ h3 {
 
         <h3>类型</h3>
         <div class="triangle-container__type">
-          <label v-show="['top', 'right', 'bottom', 'left'].includes(direction)">
-            <input type="radio" name="triangle-type" v-model="type" value="1" />等边
-          </label>
-          <label>
-            <input type="radio" name="triangle-type" v-model="type" value="2" />等腰
-          </label>
-          <label>
-            <input type="radio" name="triangle-type" v-model="type" value="3" />不等边
-          </label>
+          <el-radio
+            v-show="['top', 'right', 'bottom', 'left'].includes(direction)"
+            v-model="type"
+            :label="1"
+          >等边</el-radio>
+          <el-radio v-model="type" :label="2">等腰</el-radio>
+          <el-radio v-model="type" :label="3">不等边</el-radio>
         </div>
 
         <h3>大小</h3>
         <div class="triangle-container__size">
-          <label>
-            <span>宽度</span>
-            <input
-              type="number"
-              v-model="width"
-              :readonly="type == 3 && ['top', 'bottom'].includes(direction)"
-              @input="() => {if (type == 2 && ['top-left', 'top-right', 'bottom-left', 'bottom-right'].includes(direction)) this.height = this.width}"
-            />px
-          </label>
-          <label>
-            <span>左</span>
-            <input
-              type="number"
-              v-model="left"
-              :readonly="type == 1 || type == 2 || (type == 3 && ['top-left', 'left', 'top-right', 'right', 'bottom-left', 'bottom-right'].includes(direction))"
-            />px
-          </label>
-          <label>
-            <span>右</span>
-            <input
-              type="number"
-              v-model="right"
-              :readonly="type == 1 || type == 2 || (type == 3 && ['top-left', 'left', 'top-right', 'right', 'bottom-left', 'bottom-right'].includes(direction))"
-            />px
-          </label>
-          <label>
-            <span>高度</span>
-            <input
-              type="number"
-              v-model="height"
-              :readonly="type == 1 || (type == 3 && ['left', 'right'].includes(direction))"
-              @input="() => {if (type == 2 && ['top-left', 'top-right', 'bottom-left', 'bottom-right'].includes(direction)) this.width = this.height}"
-            />px
-          </label>
-          <label>
-            <span>上</span>
-            <input
-              type="number"
-              v-model="top"
-              :readonly="type == 1 || type == 2 || (type == 3 && ['top-left', 'top', 'top-right', 'bottom-left', 'bottom', 'bottom-right'].includes(direction))"
-            />px
-          </label>
-          <label>
-            <span>下</span>
-            <input
-              type="number"
-              v-model="bottom"
-              :readonly="type == 1 || type == 2 || (type == 3 && ['top-left', 'top', 'top-right', 'bottom-left', 'bottom', 'bottom-right'].includes(direction))"
-            />px
-          </label>
+          <el-form label-width="80px">
+            <el-form-item label="宽度">
+              <el-input-number
+                :disabled="type == 3 && ['top', 'bottom'].includes(direction)"
+                v-model="width"
+                @change="() => {if (type == 2 && ['top-left', 'top-right', 'bottom-left', 'bottom-right'].includes(direction)) this.height = this.width}"
+              ></el-input-number> px
+            </el-form-item>
+            <el-form-item label="左">
+              <el-input-number
+                :disabled="type == 1 || type == 2 || (type == 3 && ['top-left', 'left', 'top-right', 'right', 'bottom-left', 'bottom-right'].includes(direction))"
+                v-model="left"
+              ></el-input-number> px
+            </el-form-item>
+            <el-form-item label="右">
+              <el-input-number
+                :disabled="type == 1 || type == 2 || (type == 3 && ['top-left', 'left', 'top-right', 'right', 'bottom-left', 'bottom-right'].includes(direction))"
+                v-model="right"
+              ></el-input-number> px
+            </el-form-item>
+            <el-form-item label="高度">
+              <el-input-number
+                :disabled="type == 1 || (type == 3 && ['left', 'right'].includes(direction))"
+                v-model="height"
+                @change="() => {if (type == 2 && ['top-left', 'top-right', 'bottom-left', 'bottom-right'].includes(direction)) this.width = this.height}"
+              ></el-input-number> px
+            </el-form-item>
+            <el-form-item label="上">
+              <el-input-number
+                :disabled="type == 1 || type == 2 || (type == 3 && ['top-left', 'top', 'top-right', 'bottom-left', 'bottom', 'bottom-right'].includes(direction))"
+                v-model="top"
+              ></el-input-number> px
+            </el-form-item>
+            <el-form-item label="下">
+              <el-input-number
+                :disabled="type == 1 || type == 2 || (type == 3 && ['top-left', 'top', 'top-right', 'bottom-left', 'bottom', 'bottom-right'].includes(direction))"
+                v-model="bottom"
+              ></el-input-number> px
+            </el-form-item>
+          </el-form>
         </div>
       </div>
       <div class="triangle-container__view">

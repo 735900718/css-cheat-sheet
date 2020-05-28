@@ -44,7 +44,8 @@ module.exports = {
           title: '效果',
           collapsable: false,
           children: [
-            ['Shuttle', '穿梭机']
+            ['Shuttle', '穿梭机'],
+            ['HorizontalScroll', '横向滚动']
           ]
         },
         {

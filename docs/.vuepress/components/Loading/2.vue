@@ -18,11 +18,11 @@
   border-radius: 50%;
   transform-origin: center;
   animation: loading 2s infinite;
-  &:nth-child(1) {animation-delay: .1s}
-  &:nth-child(2) {animation-delay: .2s}
-  &:nth-child(3) {animation-delay: .3s}
-  &:nth-child(4) {animation-delay: .4s}
-  &:nth-child(5) {animation-delay: .5s}
+  &:nth-child(1) {animation-delay: -.1s}
+  &:nth-child(2) {animation-delay: -.2s}
+  &:nth-child(3) {animation-delay: -.3s}
+  &:nth-child(4) {animation-delay: -.4s}
+  &:nth-child(5) {animation-delay: -.5s}
 }
 
 @keyframes loading {
@@ -95,12 +95,12 @@ export default {
   border-radius: 50%;
   transform-origin: center;
   animation: loading 2s infinite;
-  &:nth-child(1) {animation-delay: .1s}
-  &:nth-child(2) {animation-delay: .2s}
-  &:nth-child(3) {animation-delay: .3s}
-  &:nth-child(4) {animation-delay: .4s}
-  &:nth-child(5) {animation-delay: .5s}
 }
+.load-container__circle:nth-child(1) {animation-delay: -.1s}
+.load-container__circle:nth-child(2) {animation-delay: -.2s}
+.load-container__circle:nth-child(3) {animation-delay: -.3s}
+.load-container__circle:nth-child(4) {animation-delay: -.4s}
+.load-container__circle:nth-child(5) {animation-delay: -.5s}
 
 @keyframes loading {
   0% {

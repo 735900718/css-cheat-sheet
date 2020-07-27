@@ -3,3 +3,5 @@
 > PS：子元素需是 边长= 容器大小 - 滚动条宽度 的正方形
 
 <HorizontalScroll />
+
+> 参考资料 [http://www.alloyteam.com/2020/04/14349/](http://www.alloyteam.com/2020/04/14349/)
